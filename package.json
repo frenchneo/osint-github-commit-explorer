@@ -1,0 +1,27 @@
+{
+  "name": "osint-github-commit-explorer",
+  "version": "1.0.0",
+  "author": "frenchneo",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frenchneo/osint-github-commit-explorer.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc --build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src/**/*.ts",
+    "start": "node ./dist/main.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "chalk": "^5.3.0",
+    "nodemon": "^3.0.2",
+    "programmer": "^2.0.0",
+    "readline-sync": "^1.4.10",
+    "rimraf": "^5.0.5",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3"
+  }
+}

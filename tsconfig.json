@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6", "es2019", "es2015", "dom", "es2018"],
+    "target": "es5",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "declaration": false,
+    "sourceMap": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "noUnusedLocals": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "./dist/**/*",
+    "./src/**/__tests__",
+    "./src/**/__mocks__",
+    "./src/**/__fixtures__",
+    "node_modules"
+  ]
+}
