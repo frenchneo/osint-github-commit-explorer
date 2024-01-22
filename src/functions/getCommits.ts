@@ -62,6 +62,15 @@ export async function getCommits(username: string) {
               "Git Repository is empty."
           ) {
             console.log(`\x1b[1;33mIgnoring empty repository: ${repo}\x1b[0m`);
+          }
+          else if (
+            axiosError.response?.status === 403 &&
+            (axiosError.response?.data as any)?.message ===
+              "Repository access blocked"
+          ) {
+            console.log(
+              `\x1b[1;33mIgnoring blocked repository: ${repo}\x1b[0m`
+            );
           } else {
             throw error;
           }
